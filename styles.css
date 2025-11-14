@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Godhead Elementary School Stylesheet
+   Author: Professional Web Developer
+   Description: Light brown theme with flexbox layouts
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Variables (Color Palette)
+   -------------------------------------------------------------------------- */
+:root {
+	/* Light brown color scheme */
+	--light-brown: #D4BEA7;       /* Primary light brown */
+	--lighter-brown: #E8DDD1;     /* Background color */
+	--darker-brown: #8B7355;      /* Text and accents */
+	--brown-shadow: rgba(139, 115, 85, 0.15); /* Shadows */
+	--white: #FFFFFF;
+	--text-dark: #333333;
+}
+
+/* --------------------------------------------------------------------------
+   2. Base Styles & Reset
+   -------------------------------------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: var(--lighter-brown);
+	color: var(--text-dark);
+}
+
+/* --------------------------------------------------------------------------
+   3. Header & Navigation
+   -------------------------------------------------------------------------- */
+header {
+	background-color: var(--light-brown);
+	padding: 1rem 2rem;
+	box-shadow: 0 2px 5px var(--brown-shadow);
+}
+
+.header-inner {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 60px;
+	width: auto;
+}
+
+/* Navigation styling */
+.nav-list {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+.nav-link {
+	color: var(--text-dark);
+	text-decoration: none;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+	background-color: var(--darker-brown);
+	color: var(--white);
+}
+
+/* --------------------------------------------------------------------------
+   4. Main Content
+   -------------------------------------------------------------------------- */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+/* Hero section */
+.hero {
+	text-align: center;
+	padding: 3rem 1rem;
+	background-color: var(--white);
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px var(--brown-shadow);
+}
+
+.hero h1 {
+	color: var(--darker-brown);
+	margin-bottom: 1rem;
+	font-size: 2.5rem;
+}
+
+.tagline {
+	color: var(--darker-brown);
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+/* Building Image */
+.building-image {
+    margin: 2rem auto 0;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--brown-shadow);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* About section */
+.about {
+	background-color: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px var(--brown-shadow);
+}
+
+/* Features section */
+.features {
+	background-color: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px var(--brown-shadow);
+}
+
+.feature-list {
+	list-style-position: inside;
+	margin: 1rem 0;
+}
+
+.feature-list li {
+	padding: 0.5rem 0;
+	color: var(--darker-brown);
+}
+
+/* --------------------------------------------------------------------------
+   5. Buttons
+   -------------------------------------------------------------------------- */
+.btn-primary {
+	display: inline-block;
+	padding: 0.8rem 1.5rem;
+	background-color: var(--darker-brown);
+	color: var(--white);
+	text-decoration: none;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.btn-primary:hover {
+	background-color: var(--light-brown);
+	color: var(--text-dark);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px var(--brown-shadow);
+}
+
+/* --------------------------------------------------------------------------
+   6. Footer
+   -------------------------------------------------------------------------- */
+footer {
+	background-color: var(--light-brown);
+	padding: 2rem;
+	margin-top: 3rem;
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.social-link {
+    color: var(--darker-brown);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: var(--text-dark);
+    background: none;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+	.header-inner {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.nav-list {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.footer-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.container {
+		padding: 1rem;
+	}
+
+	.hero {
+		padding: 2rem 1rem;
+	}
+
+	.hero h1 {
+		font-size: 2rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   8. Carousel Styles
+   -------------------------------------------------------------------------- */
+.carousel {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px var(--brown-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    border-radius: 8px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* You can adjust this height as needed */
+    object-fit: cover; /* This will ensure the image covers the entire container without distortion */
+}
